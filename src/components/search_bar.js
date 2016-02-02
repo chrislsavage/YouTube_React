@@ -5,11 +5,11 @@ import React, {Component} from 'react';
 class SearchBar extends Component {
   constructor(props) {
     super(props); //have to call super or you get an error
-    this.state = { term: 'start value' };  //state has a property that we want to record on the state.  term updates the user input.
+    this.state = { term: '' };  //state has a property that we want to record on the state.  term updates the user input.
   }
   render() { //this is the default way of defining methods on a class as a function
     return (
-      <div>
+      <div className="search-bar">
       <input
         value = {this.state.term}
         onChange={event => this.setState({ term: event.target.value})} />
