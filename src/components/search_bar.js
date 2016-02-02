@@ -12,10 +12,15 @@ class SearchBar extends Component {
       <div className="search-bar">
       <input
         value = {this.state.term}
-        onChange={event => this.setState({ term: event.target.value})} />
+        onChange={event => this.onInputChange(event.target.value)} />
       </div>
     );
   }
+
+  onInputChange(term) {
+    this.setState({term});
+    this.props.onSearchTermChange(term);
+  };
   //A controlled field is a form element that is set by the state.
   //Whenever you want to manipulate value of input you want to use state.
   //always use setState to inform react that the state is changing...you must return jsx for it to not throw an error...this refers to the event Handler //On change is a react property
