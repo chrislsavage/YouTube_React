@@ -18,4 +18,4 @@ const VideoListItem = ({video}) => { // same as const video = props.video
   );
 };
 
-export default VideoListItem
+export default VideoListItem;
